@@ -8,7 +8,8 @@ LDFLAGS = -L/opt/homebrew/opt/openssl@3/lib -L/opt/homebrew/lib
 TARGET = aes_program
 
 # Source files
-SRCS = main.cpp encrypt.cpp XOR.cpp keySchedule.cpp subBytes.cpp shiftRows.cpp mixColumns.cpp sbox.cpp db_connection.cpp uidSerialCommunication.cpp tagWriting.cpp
+# SRCS = main.cpp encrypt.cpp XOR.cpp keySchedule.cpp subBytes.cpp shiftRows.cpp mixColumns.cpp sbox.cpp db_connection.cpp uidSerialCommunication.cpp tagWriting.cpp
+SRCS = main.cpp aesEncryption/encrypt.cpp aesEncryption/XOR.cpp aesEncryption/keySchedule.cpp aesEncryption/subBytes.cpp aesEncryption/shiftRows.cpp aesEncryption/mixColumns.cpp aesEncryption/sbox.cpp db_connection.cpp uidSerialCommunication.cpp tagWriting.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 # Default target
